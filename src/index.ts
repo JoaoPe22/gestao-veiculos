@@ -36,3 +36,14 @@ const contratoPremium = new ContratoLocacaoBuilder()
 
 console.log("Contrato básico:", contratoBasico);
 console.log("Contrato premium:", contratoPremium);
+
+onix.acessorios.push("Ar-condicionado", "Câmera de ré");
+
+const onixCopia = onix.clone();
+onixCopia.placa = "JKL0M12";
+onixCopia.acessorios.push("Engate");
+Frota.getInstancia().adicionar(onixCopia);
+
+console.log("Onix original:", onix);
+console.log("Onix clonado:", onixCopia);
+console.log("Frota após clonagem:", Frota.getInstancia().listar());
